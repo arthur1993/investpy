@@ -143,7 +143,7 @@ class SearchObj(object):
                 try:
                     res = self._data_retrieval(product=self.pair_type, head=head, params=params)
                     result.append(res)
-                except:
+                except Exception:
                     continue
 
             if len(result) > 0:
@@ -211,14 +211,14 @@ class SearchObj(object):
                         if value.is_integer() is True: value = int(value)
                     result[title] = value if value != 'N/A' else None
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
                     text = datetime.strptime(text, "%m/%d/%Y").strftime("%d/%m/%Y")
                     result[title] = text if text != 'N/A' else None
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
@@ -226,7 +226,7 @@ class SearchObj(object):
                         text = text.replace('1 = ', '')
                         result[title] = text if text != 'N/A' else None
                         continue
-                except:
+                except Exception:
                     pass
                 try:
                     value = element.getnext().text_content().strip()
@@ -242,7 +242,7 @@ class SearchObj(object):
                         if value.is_integer() is True: value = int(value)
                     result[title] = value if value != 'N/A' else None
                     continue
-                except:
+                except Exception:
                     pass
         else:
             raise RuntimeError("ERR#0004: data retrieval error while scraping.")

@@ -900,7 +900,7 @@ def get_stock_dividends(stock, country):
                             try:
                                 value = int(element_.getnext().get('data-value'))
                                 dividend_payment_date = datetime.strptime(str(datetime.fromtimestamp(value).date()), '%Y-%m-%d')
-                            except:
+                            except Exception:
                                 dividend_payment_date = None
                             next_element_ = element_.getnext()
                             dividend_yield = next_element_.getnext().text_content()
@@ -964,7 +964,7 @@ def get_stock_dividends(stock, country):
                                     try:
                                         value = int(element_.getnext().get('data-value'))
                                         dividend_payment_date = datetime.strptime(str(datetime.fromtimestamp(value).date()), '%Y-%m-%d')
-                                    except:
+                                    except Exception:
                                         dividend_payment_date = None
                                     next_element_ = element_.getnext()
                                     dividend_yield = next_element_.getnext().text_content()
@@ -1103,13 +1103,13 @@ def get_stock_information(stock, country, as_json=False):
                 try:
                     result.at[0, title_] = float(element.getnext().text_content().replace(',', ''))
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
                     result.at[0, title_] = datetime.strptime(text, "%b %d, %Y").strftime("%d/%m/%Y")
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     value = element.getnext().text_content().strip()
@@ -1119,7 +1119,7 @@ def get_stock_information(stock, country, as_json=False):
                         value = float(value.replace('T', '').replace(',', '')) * 1e12
                     result.at[0, title_] = value
                     continue
-                except:
+                except Exception:
                     pass
 
         result.replace({'N/A': None}, inplace=True)

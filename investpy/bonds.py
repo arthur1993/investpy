@@ -678,13 +678,13 @@ def get_bond_information(bond, as_json=False):
                 try:
                     result.at[0, title_] = float(element.getnext().text_content().replace(',', ''))
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
                     result.at[0, title_] = datetime.strptime(text, "%d %b %Y").strftime("%d/%m/%Y")
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
@@ -712,7 +712,7 @@ def get_bond_information(bond, as_json=False):
                                 res.append(match.replace(' ', ''))
                             result.at[0, title_] = ' - '.join(res)
                             continue
-                except:
+                except Exception:
                     pass
                 try:
                     value = element.getnext().text_content().strip()
@@ -726,7 +726,7 @@ def get_bond_information(bond, as_json=False):
                         value = float(value.replace('T', '').replace(',', '')) * 1e12
                     result.at[0, title_] = value
                     continue
-                except:
+                except Exception:
                     pass
 
         result.replace({'N/A': None}, inplace=True)

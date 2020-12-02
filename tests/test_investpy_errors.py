@@ -23,12 +23,12 @@ def test_stocks_errors():
     for param in params:
         try:
             investpy.get_stocks(country=param['country'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_stocks_list(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -59,7 +59,7 @@ def test_stocks_errors():
             investpy.get_stocks_dict(country=param['country'],
                                      columns=param['columns'],
                                      as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -163,7 +163,7 @@ def test_stocks_errors():
                                            as_json=param['as_json'],
                                            order=param['order'],
                                            interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -349,7 +349,7 @@ def test_stocks_errors():
                                                as_json=param['as_json'],
                                                order=param['order'],
                                                interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -405,7 +405,7 @@ def test_stocks_errors():
             investpy.get_stock_company_profile(stock=param['stock'],
                                                country=param['country'],
                                                language=param['language'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -442,7 +442,7 @@ def test_stocks_errors():
     for param in params:
         try:
             investpy.get_stock_dividends(stock=param['stock'], country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -481,7 +481,7 @@ def test_stocks_errors():
     for param in params:
         try:
             investpy.get_stock_information(stock=param['stock'], country=param['country'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -525,7 +525,7 @@ def test_stocks_errors():
     for param in params:
         try:
             investpy.get_stocks_overview(country=param['country'], as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -609,7 +609,7 @@ def test_stocks_errors():
                                                  country=param['country'], 
                                                  summary_type=param['summary_type'],
                                                  period=param['period'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -642,7 +642,7 @@ def test_stocks_errors():
     for param in params:
         try:
             investpy.search_stocks(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -660,12 +660,12 @@ def test_funds_errors():
     for param in params:
         try:
             investpy.get_funds(country=param['country'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_funds_list(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -696,7 +696,7 @@ def test_funds_errors():
             investpy.get_funds_dict(country=param['country'],
                                     columns=param['columns'],
                                     as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -793,7 +793,7 @@ def test_funds_errors():
                                           as_json=param['as_json'],
                                           order=param['order'],
                                           interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -970,7 +970,7 @@ def test_funds_errors():
                                               as_json=param['as_json'],
                                               order=param['order'],
                                               interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1021,7 +1021,7 @@ def test_funds_errors():
             investpy.get_fund_information(fund=param['fund'],
                                           country=param['country'],
                                           as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1065,7 +1065,7 @@ def test_funds_errors():
     for param in params:
         try:
             investpy.get_funds_overview(country=param['country'], as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
 
@@ -1099,7 +1099,7 @@ def test_funds_errors():
     for param in params:
         try:
             investpy.search_funds(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -1120,12 +1120,12 @@ def test_etfs_errors():
     for param in params:
         try:
             investpy.get_etfs(country=param['country'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_etfs_list(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1156,7 +1156,7 @@ def test_etfs_errors():
             investpy.get_etfs_dict(country=param['country'],
                                    columns=param['columns'],
                                    as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1260,7 +1260,7 @@ def test_etfs_errors():
                                          as_json=param['as_json'],
                                          order=param['order'],
                                          interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1428,7 +1428,7 @@ def test_etfs_errors():
                                              as_json=param['as_json'],
                                              order=param['order'],
                                              interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1467,7 +1467,7 @@ def test_etfs_errors():
     for param in params:
         try:
             investpy.get_etf_information(etf=param['etf'], country=param['country'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1511,7 +1511,7 @@ def test_etfs_errors():
     for param in params:
         try:
             investpy.get_etfs_overview(country=param['country'], as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1544,7 +1544,7 @@ def test_etfs_errors():
     for param in params:
         try:
             investpy.search_etfs(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -1565,12 +1565,12 @@ def test_indices_errors():
     for param in params:
         try:
             investpy.get_indices(country=param['country'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_indices_list(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1601,7 +1601,7 @@ def test_indices_errors():
             investpy.get_indices_dict(country=param['country'],
                                       columns=param['columns'],
                                       as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1705,7 +1705,7 @@ def test_indices_errors():
                                            as_json=param['as_json'],
                                            order=param['order'],
                                            interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1873,7 +1873,7 @@ def test_indices_errors():
                                                as_json=param['as_json'],
                                                order=param['order'],
                                                interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1917,7 +1917,7 @@ def test_indices_errors():
     for param in params:
         try:
             investpy.get_index_information(index=param['index'], country=param['country'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1956,7 +1956,7 @@ def test_indices_errors():
     for param in params:
         try:
             investpy.get_indices_overview(country=param['country'], as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -1989,7 +1989,7 @@ def test_indices_errors():
     for param in params:
         try:
             investpy.search_indices(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -2029,13 +2029,13 @@ def test_currency_crosses_errors():
         try:
             investpy.get_currency_crosses(base=param['base'],
                                           second=param['second'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_currency_crosses_list(base=param['base'],
                                                second=param['second'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2101,7 +2101,7 @@ def test_currency_crosses_errors():
                                                second=param['second'],
                                                columns=param['columns'],
                                                as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2167,7 +2167,7 @@ def test_currency_crosses_errors():
                                                     as_json=param['as_json'],
                                                     order=param['order'],
                                                     interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2277,7 +2277,7 @@ def test_currency_crosses_errors():
                                                         as_json=param['as_json'],
                                                         order=param['order'],
                                                         interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2316,7 +2316,7 @@ def test_currency_crosses_errors():
     for param in params:
         try:
             investpy.get_currency_crosses_overview(currency=param['currency'], as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2341,7 +2341,7 @@ def test_currency_crosses_errors():
     for param in params:
         try:
             investpy.get_currency_cross_information(currency_cross=param['currency_cross'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2374,7 +2374,7 @@ def test_currency_crosses_errors():
     for param in params:
         try:
             investpy.search_currency_crosses(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -2395,12 +2395,12 @@ def test_bonds_errors():
     for param in params:
         try:
             investpy.get_bonds(country=param['country'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_bonds_list(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2431,7 +2431,7 @@ def test_bonds_errors():
             investpy.get_bonds_dict(country=param['country'],
                                     columns=param['columns'],
                                     as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2491,7 +2491,7 @@ def test_bonds_errors():
                                           as_json=param['as_json'],
                                           order=param['order'],
                                           interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2617,7 +2617,7 @@ def test_bonds_errors():
                                               as_json=param['as_json'],
                                               order=param['order'],
                                               interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2642,7 +2642,7 @@ def test_bonds_errors():
     for param in params:
         try:
             investpy.get_bond_information(bond=param['bond'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
     
     params = [
@@ -2667,7 +2667,7 @@ def test_bonds_errors():
     for param in params:
         try:
             investpy.get_bonds_overview(country=param['country'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2700,7 +2700,7 @@ def test_bonds_errors():
     for param in params:
         try:
             investpy.search_bonds(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -2721,12 +2721,12 @@ def test_commodities_errors():
     for param in params:
         try:
             investpy.get_commodities(group=param['group'])
-        except:
+        except Exception:
             pass
 
         try:
             investpy.get_commodities_list(group=param['group'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2762,7 +2762,7 @@ def test_commodities_errors():
             investpy.get_commodities_dict(group=param['group'],
                                           columns=param['columns'],
                                           as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -2845,7 +2845,7 @@ def test_commodities_errors():
                                                as_json=param['as_json'],
                                                order=param['order'],
                                                interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3004,7 +3004,7 @@ def test_commodities_errors():
                                                    as_json=param['as_json'],
                                                    order=param['order'],
                                                    interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3043,7 +3043,7 @@ def test_commodities_errors():
     for param in params:
         try:
             investpy.get_commodity_information(commodity=param['commodity'], country=param['country'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
     
     params = [
@@ -3082,7 +3082,7 @@ def test_commodities_errors():
     for param in params:
         try:
             investpy.get_commodities_overview(group=param['group'], as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3115,7 +3115,7 @@ def test_commodities_errors():
     for param in params:
         try:
             investpy.search_commodities(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -3143,7 +3143,7 @@ def test_crypto_errors():
         try:
             investpy.get_cryptos_dict(columns=param['columns'],
                                       as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3209,7 +3209,7 @@ def test_crypto_errors():
                                             as_json=param['as_json'],
                                             order=param['order'],
                                             interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3319,7 +3319,7 @@ def test_crypto_errors():
                                                 as_json=param['as_json'],
                                                 order=param['order'],
                                                 interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3348,7 +3348,7 @@ def test_crypto_errors():
     for param in params:
         try:
             investpy.get_crypto_information(crypto=param['crypto'], as_json=param['as_json'])
-        except:
+        except Exception:
             pass
     
     params = [
@@ -3369,7 +3369,7 @@ def test_crypto_errors():
     for param in params:
         try:
             investpy.get_cryptos_overview(as_json=param['as_json'], n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3402,7 +3402,7 @@ def test_crypto_errors():
     for param in params:
         try:
             investpy.search_cryptos(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -3423,7 +3423,7 @@ def test_certificate_errors():
     for param in params:
         try:
             investpy.get_certificates(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3438,7 +3438,7 @@ def test_certificate_errors():
     for param in params:
         try:
             investpy.get_certificates_list(country=param['country'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3474,7 +3474,7 @@ def test_certificate_errors():
             investpy.get_certificates_dict(country=param['country'],
                                            columns=param['columns'],
                                            as_json=param['as_json'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3564,7 +3564,7 @@ def test_certificate_errors():
                                                  as_json=param['as_json'],
                                                  order=param['order'],
                                                  interval=param['interval'])
-        except:
+        except Exception:
             pass
         
     params = [
@@ -3714,7 +3714,7 @@ def test_certificate_errors():
                                                      as_json=param['as_json'],
                                                      order=param['order'],
                                                      interval=param['interval'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3760,7 +3760,7 @@ def test_certificate_errors():
             investpy.get_certificate_information(certificate=param['certificate'],
                                                  country=param['country'],
                                                  as_json=param['as_json'])
-        except:
+        except Exception:
             pass
     
     params = [
@@ -3801,7 +3801,7 @@ def test_certificate_errors():
             investpy.get_certificates_overview(country=param['country'],
                                                as_json=param['as_json'],
                                                n_results=param['n_results'])
-        except:
+        except Exception:
             pass
 
     params = [
@@ -3834,7 +3834,7 @@ def test_certificate_errors():
     for param in params:
         try:
             investpy.search_certificates(by=param['by'], value=param['value'])
-        except:
+        except Exception:
             pass
 
 
@@ -3926,10 +3926,10 @@ def test_search_errors():
                 for date in dates:
                     try:
                         result.retrieve_historical_data(from_date=date['from_date'], to_date=date['to_date'])
-                    except:
+                    except Exception:
                         continue
                 break
-        except:
+        except Exception:
             pass
 
 
@@ -4067,7 +4067,7 @@ def test_news_errors():
                                   categories=param['categories'],
                                   from_date=param['from_date'],
                                   to_date=param['to_date'])
-        except:
+        except Exception:
             pass
 
 
@@ -4157,7 +4157,7 @@ def test_technical_errors():
                                           country=param['country'],
                                           product_type=param['product_type'],
                                           interval=param['interval'])
-        except:
+        except Exception:
             pass
 
         try:
@@ -4165,7 +4165,7 @@ def test_technical_errors():
                                      country=param['country'],
                                      product_type=param['product_type'],
                                      interval=param['interval'])
-        except:
+        except Exception:
             pass
 
         try:
@@ -4173,7 +4173,7 @@ def test_technical_errors():
                                   country=param['country'],
                                   product_type=param['product_type'],
                                   interval=param['interval'])
-        except:
+        except Exception:
             pass
 
 

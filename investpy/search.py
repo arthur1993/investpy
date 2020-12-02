@@ -67,7 +67,7 @@ def search_quotes(text, products=None, countries=None, n_results=None):
     if products:
         try:
             products = list(map(lambda product: unidecode(product.lower().strip()), products))
-        except:
+        except Exception:
             raise ValueError("ERR#0130: the introduced products filter must be a list of str in order to be valid.")
 
         condition = set(products).issubset(cst.PRODUCT_FILTERS.keys())
@@ -82,7 +82,7 @@ def search_quotes(text, products=None, countries=None, n_results=None):
     if countries:
         try:
             countries = list(map(lambda country: unidecode(country.lower().strip()), countries))
-        except:
+        except Exception:
             raise ValueError("ERR#0131: the introduced countries filter must be a list of str in order to be valid.")
 
         condition = set(countries).issubset(cst.COUNTRY_FILTERS.keys())

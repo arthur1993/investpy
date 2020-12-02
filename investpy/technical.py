@@ -471,7 +471,7 @@ def pivot_points(name, country, product_type, interval='daily'):
                 val = elements[key].text_content().strip()
                 try:
                     pivot_pt.update({value: float(val)})
-                except:
+                except Exception:
                     pivot_pt.update({value: None})
             else:
                 pivot_pt.update({value: elements[key].text_content().strip()})

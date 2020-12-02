@@ -713,13 +713,13 @@ def get_fund_information(fund, country, as_json=False):
                 try:
                     result.at[0, title_] = float(element.getnext().text_content().replace(',', ''))
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
                     result.at[0, title_] = datetime.strptime(text, "%b %d, %Y").strftime("%d/%m/%Y")
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     value = element.getnext().text_content().strip()
@@ -733,7 +733,7 @@ def get_fund_information(fund, country, as_json=False):
                         value = float(value.replace('T', '').replace(',', '')) * 1e12
                     result.at[0, title_] = value
                     continue
-                except:
+                except Exception:
                     pass
 
         result.replace({'N/A': None}, inplace=True)

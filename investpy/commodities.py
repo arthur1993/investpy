@@ -768,20 +768,20 @@ def get_commodity_information(commodity, country=None, as_json=False):
                 try:
                     result.at[0, title_] = float(element.getnext().text_content().replace(',', ''))
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
                     result.at[0, title_] = datetime.strptime(text, "%m/%d/%Y").strftime("%d/%m/%Y")
                     continue
-                except:
+                except Exception:
                     pass
                 try:
                     text = element.getnext().text_content().strip()
                     if text.__contains__('1 = '):
                         result.at[0, title_] = text.replace('1 = ', '')
                         continue
-                except:
+                except Exception:
                     pass
                 try:
                     value = element.getnext().text_content().strip()
@@ -795,7 +795,7 @@ def get_commodity_information(commodity, country=None, as_json=False):
                         value = float(value.replace('T', '').replace(',', '')) * 1e12
                     result.at[0, title_] = value
                     continue
-                except:
+                except Exception:
                     pass
 
         result.replace({'N/A': None}, inplace=True)
